@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class DataRunner {
+  public static void main(String[] args) {
+
+    BallInfo ball = new BallInfo("teams.txt", "locations.txt", "arenas.txt", "capacities.txt", "championships.txt");
+    System.out.println(ball);
+
+
+
+
+    
+    
+    
+  }
+}
+
