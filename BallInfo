@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class BallInfo {
+
+  private Ball[] stats;
+
+  public BallInfo(String teamsFile, String locationsFile, String arenasFile, String capacityFile, String ringsFile) {
+    stats = createBalls(teamsFile, locationsFile, arenasFile, capacityFile, ringsFile);
+  }
+
+    public Ball[] createBalls(String teamsFile, String locationsFile, String arenasFile, String capacityFile, String ringsFile) {
+    String[] teamsData = FileReader.toStringArray(teamsFile);
+    String[] locationsData = FileReader.toStringArray(locationsFile);
+    String[] arenasData = FileReader.toStringArray(arenasFile);
+    int[] capacityData = FileReader.toIntArray(capacityFile);
+    int[] ringsData = FileReader.toIntArray(ringsFile);
+    Ball[] tempStats = new Ball[teamsData.length];
+
+
+      for (int index = 0; index < tempStats.length; index++) {
+      tempStats[index] = new Ball(teamsData[index], locationsData[index], arenasData[index], capacityData[index], ringsData[index]);
+    }
+
+    return tempStats;
+
+    }
+
+   public String toString() {
+    String result = "";
+
+    for (Ball theBall: stats) {
+      result += theBall + "\n";
+    }
+
+    return result;
+  }
+
+
+
+  
+}
