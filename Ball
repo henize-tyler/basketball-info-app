@@ -1,0 +1,53 @@
+
+public class Ball {
+
+  private String teams;
+  private String locations; 
+  private String arenas;
+  private int capacity;
+  private int rings; 
+
+  
+    public Ball(){
+      teams = "";
+      locations = "";
+      arenas = "";
+      capacity = 0;
+      rings = 0;
+    }
+
+    public Ball(String teams, String locations, String arenas, int capacity, int rings) {
+      this.teams = teams;
+      this.locations = locations;
+      this.arenas = arenas;
+      this.capacity = capacity;
+      this.rings = rings;
+    }
+
+
+    public String getTeams(){
+      return teams;
+    }
+
+    public String getLocations(){
+      return locations;
+    }
+
+    public String getArenas(){
+      return arenas;
+    }
+
+    public int getCapacity(){
+      return capacity;
+    }
+
+    public int getRings(){
+      return rings;
+    }
+
+    public String toString() {
+
+      return "Name: " + teams + "   Locatation: " + locations + "   Arena: " + arenas + "   Capacity: " + capacity + "   Rings: " + rings;
+    }
+  
+}
